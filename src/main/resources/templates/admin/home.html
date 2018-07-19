@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+	<form th:action="@{/logout}" method="get">
+		<button class="btn btn-md btn-danger btn-block" name="registration"
+				type="Submit">Logout
+		</button>
+	</form>
+
+	<div class="panel-group" style="margin-top:40px">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<span th:utext="${userName}"></span>
+			</div>
+			<div class="panel-body">
+				<div id="buttonCreateUser">
+
+				</div>
+				<div class="container">
+
+					<form class="well form-horizontal" action=" " method="post" id="contact_form">
+						<fieldset>
+							<!-- Form Name -->
+							<legend>
+								<h2><b>Registration Form</b></h2>
+							</legend>
+							<br>
+
+							<!-- Text input-->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">First Name</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input name="first_name" placeholder="First Name" class="form-control"
+											   type="text">
+									</div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Last Name</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input name="last_name" placeholder="Last Name" class="form-control"
+											   type="text">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Department / Office</label>
+								<div class="col-md-4 selectContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+										<select name="department" class="form-control selectpicker">
+											<option value="">Select role</option>
+											<option>ADMIN</option>
+											<option>MANAGER</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Username</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input name="user_name" placeholder="Username" class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Password</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input name="user_password" placeholder="Password" class="form-control"
+											   type="password">
+									</div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Confirm Password</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+										<input name="confirm_password" placeholder="Confirm Password"
+											   class="form-control" type="password">
+									</div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label">E-Mail</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+												class="glyphicon glyphicon-envelope"></i></span>
+										<input name="userAccount" placeholder="E-Mail Address" class="form-control"
+											   type="text">
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Text input-->
+
+							<div class="form-group">
+								<label class="col-md-4 control-label">Contact No.</label>
+								<div class="col-md-4 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+												class="glyphicon glyphicon-earphone"></i></span>
+										<input name="contact_no" placeholder="(639)" class="form-control" type="text">
+									</div>
+								</div>
+							</div>
+
+							<!-- Select Basic -->
+
+							<!-- Success message -->
+							<div class="alert alert-success" role="alert" id="success_message">Success <i
+									class="glyphicon glyphicon-thumbs-up"></i> Success!.
+							</div>
+
+							<!-- Button -->
+							<div class="form-group">
+								<label class="col-md-4 control-label"></label>
+								<div class="col-md-4"><br>
+									<button type="submit" class="btn btn-warning">SUBMIT <span
+											class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+									</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<!--<img th:src="@{/images/}" class="img-responsive center-block" width="400" height="400" alt="Beer" /> -->
+		</div>
+		<p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
+	</div>
+</div>
+</div>
+</body>
+</html>
+

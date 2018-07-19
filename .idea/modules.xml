@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBootLogin-master.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBootLogin-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBootLogin-master_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBootLogin-master_main.iml" group="SpringBootLogin-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBootLogin-master_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBootLogin-master_test.iml" group="SpringBootLogin-master" />
+    </modules>
+  </component>
+</project>
